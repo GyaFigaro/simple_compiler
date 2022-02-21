@@ -1,0 +1,22 @@
+[非终结符]
+S' S A B E 
+[终结符]
+func key id int_num char_str + - * / = ( ) { }
+[文法起始符]
+G'
+[生成式]
+G' -> S';
+S' -> key id;
+S' -> id = E;
+S' -> id ( id );
+S' -> id ( int_num );
+S' -> id ( char_str );
+E -> E + A;
+E -> E - A;
+E -> A;
+A -> A * B;
+A -> A / B;
+A -> B;
+B -> ( E );
+B -> id;
+B -> int_num;
