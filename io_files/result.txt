@@ -1,0 +1,15 @@
+MOV 8 a
+MOV 5 b
+MOV 3 c
+MOV a R0
+MUL b R0
+MOV c R1
+ADD R0 R1
+MOV R1 a
+MOV a R2
+MUL b R2
+MOV a R3
+SUB b R3
+ADD R3 R2
+ADD c R2
+MOV R2 result
